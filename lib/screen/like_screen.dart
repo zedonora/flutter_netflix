@@ -28,7 +28,7 @@ class _LikeScreenState extends State<LikeScreen> {
         crossAxisCount: 3,
         childAspectRatio: 1 / 1.5,
         padding: EdgeInsets.all(3),
-        children: snapshot.map((data) => _buildListItem(context, data)),
+        children: snapshot.map((data) => _buildListItem(context, data)).toList(),
       ),
     );
   }
@@ -51,7 +51,7 @@ class _LikeScreenState extends State<LikeScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: [
+        children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(20, 27, 20, 7),
             child: Row(
